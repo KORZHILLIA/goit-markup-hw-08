@@ -1,0 +1,19 @@
+@mixin container($width, $p-vert, $p-horiz, $ml: auto, $mr: auto) {
+  max-width: $width;
+  padding: $p-vert $p-horiz;
+  margin-left: $ml;
+  margin-right: $mr;
+}
+
+@mixin list($margin, $padding, $list-style) {
+    margin: $margin;
+    padding: $padding;
+    list-style: $list-style;
+}
+
+@mixin font($fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

@@ -1,0 +1,29 @@
+.filter-btns {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-btns__item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter-btn {
+  padding: 6px 22px;
+  background-color: $support-background-color;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $additional-and-hover-color;
+  color: $white;
+    }
+}

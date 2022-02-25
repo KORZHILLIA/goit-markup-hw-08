@@ -1,0 +1,17 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $backdrop-color;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform $transition, opacity $transition;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}

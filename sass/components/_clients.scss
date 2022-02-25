@@ -1,0 +1,30 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client__pic {
+  width: 170px;
+  height: 92px;
+  border: 1px solid $team-social-icon-color;
+  border-radius: 4px;
+  transition: border-color $transition;
+
+  &:hover {
+      border-color: $additional-and-hover-color;
+  }
+
+}
+
+.icon-client {
+  fill: $team-social-icon-color;
+  transition: fill $transition;
+
+  .client__pic:hover & {
+      fill: $additional-and-hover-color;
+  }
+}

@@ -1,0 +1,38 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features__item {
+  width: 270px;
+
+  &:not(:last-child) {
+      margin-right: 30px;
+  }
+}
+
+
+.feature-pic {
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $support-background-color;
+  border-radius: 4px;
+}
+
+.feature-describer {
+  letter-spacing: 0.03em;
+}
+
+.feature-describer__header {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.14;
+  font-weight: 700;
+}
+
+.feature-describer__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $font-support-color;
+}

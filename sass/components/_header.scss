@@ -1,0 +1,295 @@
+.page-header {
+  font-weight: 500;
+  color: $font-lead-color;
+  border-bottom: 1px solid $header-border-color;
+}
+
+.page-header__container {
+  position: relative;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Raleway, Tahoma, sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: 1.16;
+  font-weight: 700;
+  color: $font-lead-color;
+
+  @media screen and (min-width: 768px), (min-width: 1200px) {
+    & {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+}
+
+.page-header__logo {
+  padding: 16px 0;
+
+  @media screen and (min-width: 768px) {
+    & {
+      margin-right: 88px;
+      padding: 26px 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-right: 93px;
+    }
+  }
+}
+
+.logo__text--blue-accent {
+  color: $additional-and-hover-color;
+}
+
+.icon-mobile-menu {
+  @media screen and (max-width: 767px) {
+    & {
+      display: inline-block;
+  fill: $font-lead-color;
+    }
+  &:hover,
+  &:focus {
+    fill: $additional-and-hover-color;
+  }
+}
+display: none;
+  }
+
+.header__inner-menu {
+  display: block;
+  @media screen and (max-width: 767px) {
+    & {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 48px 40px;
+  background-color: $white;
+    }
+  }
+    @media screen and (min-width: 768px) {
+      & {
+        display: flex;
+    }
+    }
+
+    @media screen and (min-width: 1200px) {
+    & {
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+    }
+
+
+}
+
+.page-header__nav {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & {
+      margin-right: 84px;
+    }
+  }
+}
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    & {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 302px;
+    }
+}
+}
+
+.navigation__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    & {
+  margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      margin-right: 50px;
+    }
+  }
+}
+
+.navigation__link {
+  display: block;
+  @include font(40px, 500, 1.18, 0.02em);
+  text-decoration: none;
+  color: inherit;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $additional-and-hover-color;
+  }
+
+  &.is-active {
+    color: $additional-and-hover-color;
+  }
+
+@media screen and (min-width: 768px) {
+& {
+  display: block;
+  padding: 32px 0;
+  @include font(14px, 500, 1.14, 0.02em);
+  text-decoration: none;
+  color: inherit;
+  transition: color $transition;
+}
+&.is-active::after {
+    position: absolute;
+    bottom: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $additional-and-hover-color;
+    border-radius: 2px;
+  }
+
+}  
+}
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    & {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-bottom: 64px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-direction: column;
+      align-items: start;
+    }
+}
+
+  @media screen and (min-width: 1200px) {
+    & {
+      flex-direction: row;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+}
+}
+
+.contacts__item:not(:first-child) {
+  @media screen and (max-width: 767px) {
+    & {
+  margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+ & {
+   margin-top: 10px;
+ }
+}
+@media screen and (min-width: 1200px) {
+ & {
+   margin-left: 30px;
+ }
+}
+}
+
+.icon-contacts {
+  display: none;
+  @media screen and (min-width: 768px) {
+  & {
+    display: inline-block;
+    margin-right: 10px;
+  fill: currentColor;
+  transition: fill $transition;
+  }
+  }
+  .contacts__mail:hover & {
+    fill: $additional-and-hover-color;
+  }
+}
+
+.contacts__tel {
+  text-decoration: inherit;
+  color: $additional-and-hover-color;
+  transition: color $transition;
+  @include font(34px, 500, 1.18, 0.02em);
+
+  @media screen and (min-width: 768px) {
+   & {
+     @include font(12px, 500, 1.17, 0.02em);
+     color: $font-support-color;
+   }
+ }
+
+  @media screen and (min-width: 1200px) {
+   & {
+     padding: 32px 0;
+     @include font(14px, 500, 1.14, 0.02em);
+   }
+ }
+
+  &:hover,
+  &:focus {
+    color: $additional-and-hover-color;
+  }
+}
+
+.contacts__mail {
+  text-decoration: inherit;
+  transition: color $transition;
+  @include font(24px, 500, 1.17, 0.02em);
+  color: $font-support-color;
+  @media screen and (min-width: 768px) {
+   & {
+     @include font(12px, 500, 1.17, 0.02em);
+   }
+ }
+
+  @media screen and (min-width: 1200px) {
+   & {
+     padding: 32px 0;
+     @include font(14px, 500, 1.14, 0.02em);
+   }
+ }
+
+  &:hover,
+  &:focus {
+    color: $additional-and-hover-color;
+  }
+
+}
+
+.mobile-socials {
+  @media screen and (max-width: 767px) {
+    & {
+      justify-content: flex-start;
+    }
+}
+@media screen and (min-width: 768px) {
+    & {
+      display: none;
+
+    }
+}
+}
+
+.mobile-socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.mobile-socials__text {
+  @include font(18px, 500, 1.22, 0.02em);
+  text-decoration: inherit;
+  color: $additional-and-hover-color;
+}
+
+.icon-mobile-social {
+  display: inline-block;
+  fill: $font-support-color;
+}

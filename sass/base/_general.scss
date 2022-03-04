@@ -19,6 +19,8 @@ body button {
 
 body img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -53,4 +55,15 @@ body img {
 
 .no-style-list {
   @include list(0, 0, none);
+}
+
+.sub-header {
+  margin-bottom: 30px;
+  @include font(28px, 700, 1.18, 0.03em);
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.18, 0.03em);
+  }
 }

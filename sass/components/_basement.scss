@@ -1,7 +1,40 @@
+
 .basement {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $main-background-color;
+}
+
+.basement__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.basement__logo-and-address {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   margin-right: 165px;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;    
+  }
 }
 
 .basement__logo {
@@ -22,15 +55,18 @@
 }
 
 .address {
-  font-size: 14px;
+  @include font(14px, 400, 1.71, 0.03em);
   font-style: normal;
   color: $footer-font-color;
-  line-height: 1.71;
   text-decoration: none;
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;    
+  }
 }
 
 .phys-address,
@@ -57,21 +93,20 @@
   }
 }
 
-.basement__container {
-  align-items: baseline;
-}
+.basement__social {
+  @media screen and (max-width: 1199px) {
+    text-align: center;    
+  }
 
-.basement__logo-and-address {
-  margin-right: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .basement__header {
+  @include font(14px, 700, 1.14, 0.03em);
   display: inline-block;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $white;
 }
@@ -85,19 +120,41 @@
 }
 
 .basement__form {
-  margin-left: 93px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;    
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+}
+}
+
+.input-and-btn {
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .basement__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: $footer-font-color;
+  
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 
   &::placeholder {
     font-size: 16px;

@@ -235,10 +235,13 @@
             <li class="team-member">
               <img
                 class="team-member__pic"
+                srcset="images/index-img/beared-guy-laughing.jpg 810w,
+                images/index-img/beared-guy-laughing-900.jpg 900w"
                 src="images/index-img/beared-guy-laughing.jpg"
                 alt="Beared Guy is Laughing"
-                width="270"
-                height="260"
+                sizes="(min-width: 1200px) 270px,
+                (min-width: 768px) 354px,
+                  100vw"
               />
               <div class="team-member__text">
                 <h3 class="team-member__name">Игорь Демьяненко</h3>
@@ -294,10 +297,13 @@
             <li class="team-member">
               <img
                 class="team-member__pic"
+                srcset="images/index-img/blonde-girl-smiling.jpg 810w,
+                images/index-img/blonde-girl-smiling-900.jpg 900w"
                 src="images/index-img/blonde-girl-smiling.jpg"
                 alt="Blonde Girl is Smiling"
-                width="270"
-                height="260"
+                sizes="(min-width: 1200px) 270px,
+                (min-width: 768px) 354px,
+                  100vw"
               />
               <div class="team-member__text">
                 <h3 class="team-member__name">Ольга Репина</h3>
@@ -353,10 +359,14 @@
             <li class="team-member">
               <img
                 class="team-member__pic"
-                src="images/index-img/young-guy-smiling.jpg"
+                srcset="images/index-img/young-guy-smiling.jpg 810w,
+                images/index-img/young-guy-smiling-900.jpg 900w"
+                src="images/index-img/young-guy-smiling.jpg
+                "
                 alt="Young Guy is Smiling"
-                width="270"
-                height="260"
+                sizes="(min-width: 1200px) 270px,
+                (min-width: 768px) 354px,
+                  100vw"
               />
               <div class="team-member__text">
                 <h3 class="team-member__name">Николай Тарасов</h3>
@@ -412,10 +422,13 @@
             <li class="team-member">
               <img
                 class="team-member__pic"
+                srcset="images/index-img/guy-in-tshirt-grinning.jpg 810w,
+                images/index-img/guy-in-tshirt-grinning-900.jpg 900w"
                 src="images/index-img/guy-in-tshirt-grinning.jpg"
                 alt="Guy in T-Shirt is Grinning"
-                width="270"
-                height="260"
+                sizes="(min-width: 1200px) 270px,
+                (min-width: 768px) 354px,
+                  100vw"
               />
               <div class="team-member__text">
                 <h3 class="team-member__name">Михаил Ермаков</h3>
@@ -522,7 +535,7 @@
       </section>
     </main>
     <footer class="basement">
-      <div class="container basement__container flexy">
+      <div class="container basement__container">
         <div class="basement__logo-and-address">
           <a href="./index.html" class="logo basement__logo">
             <span class="logo__text logo__text--blue-accent">Web</span><span class="logo-text logo__text--white-accent">Studio</span>
@@ -603,7 +616,7 @@
         </div>
         <form class="basement__form">
           <label for="basement-email" class="basement__header">Подпишитесь на рассылку</label>
-          <div class="flexy">
+          <div class="input-and-btn flexy">
             <input
               type="email"
               name="email-signin"

@@ -1,23 +1,66 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $support-background-color;
+  @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+  }
+}
+
+.team__cards {
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .team-member {
   background-color: $white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-      margin-right: 30px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;    
   }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 354px;
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    &:not(:last-child) {
+        margin-right: 30px;    
+  }
+  }
+
 }
 
 .team-member__text {
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;    
+  }
 }
+
 .team-member__name,
 .team-member__rank {
   font-size: 16px;

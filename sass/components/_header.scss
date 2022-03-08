@@ -1,11 +1,11 @@
 .page-header {
+    position: relative;
   font-weight: 500;
   color: $font-lead-color;
   border-bottom: 1px solid $header-border-color;
 }
 
 .page-header__container {
-  position: relative;
   justify-content: space-between;
 }
 
@@ -45,45 +45,71 @@
   color: $additional-and-hover-color;
 }
 
-.icon-mobile-menu {
-  @media screen and (max-width: 767px) {
-    & {
-      display: inline-block;
-  fill: $font-lead-color;
-    }
-  &:hover,
-  &:focus {
+.page-header__menu-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+
+  &:hover .icon-mobile-menu,
+  &:focus .icon-mobile-menu {
     fill: $additional-and-hover-color;
   }
+
+  &.is-open {
+    z-index: 3;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-burger {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
-display: none;
-  }
 
-.header__inner-menu {
-  display: block;
+.icon-cross {
+  display: none;
+}
+
+.icon-mobile-menu {
   @media screen and (max-width: 767px) {
-    & {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  padding: 48px 40px;
-  background-color: $white;
-    }
+      display: inline-block;
+      fill: $font-lead-color;
   }
-    @media screen and (min-width: 768px) {
-      & {
-        display: flex;
-    }
-    }
+}
 
-    @media screen and (min-width: 1200px) {
+.page-header__inner-menu {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 48px 40px;
+      background-color: $white;
+      z-index: 2;
+
+      .page-header__menu-btn.is-open ~ & {
+    display: block;
+  }
+  }
+
+  @media screen and (min-width: 768px) {
+      display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
     & {
       justify-content: space-between;
       flex-grow: 1;
     }
-    }
-
-
+  }
 }
 
 .page-header__nav {
@@ -101,13 +127,13 @@ display: none;
       align-items: start;
       margin-bottom: 302px;
     }
-}
+  }
 }
 
 .navigation__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     & {
-  margin-bottom: 32px;
+      margin-bottom: 32px;
     }
   }
   @media screen and (min-width: 768px) {
@@ -133,27 +159,26 @@ display: none;
     color: $additional-and-hover-color;
   }
 
-@media screen and (min-width: 768px) {
-& {
-  display: block;
-  padding: 32px 0;
-  @include font(14px, 500, 1.14, 0.02em);
-  text-decoration: none;
-  color: inherit;
-  transition: color $transition;
-}
-&.is-active::after {
-    position: absolute;
-    bottom: -1px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: $additional-and-hover-color;
-    border-radius: 2px;
+  @media screen and (min-width: 768px) {
+    & {
+      display: block;
+      padding: 32px 0;
+      @include font(14px, 500, 1.14, 0.02em);
+      text-decoration: none;
+      color: inherit;
+      transition: color $transition;
+    }
+    &.is-active::after {
+      position: absolute;
+      bottom: -1px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $additional-and-hover-color;
+      border-radius: 2px;
+    }
   }
-
-}  
 }
 
 .contacts {
@@ -170,7 +195,7 @@ display: none;
       flex-direction: column;
       align-items: start;
     }
-}
+  }
 
   @media screen and (min-width: 1200px) {
     & {
@@ -178,36 +203,36 @@ display: none;
       flex-shrink: 0;
       margin-left: auto;
     }
-}
+  }
 }
 
 .contacts__item:not(:first-child) {
   @media screen and (max-width: 767px) {
     & {
-  margin-bottom: 32px;
+      margin-bottom: 32px;
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
- & {
-   margin-top: 10px;
- }
-}
-@media screen and (min-width: 1200px) {
- & {
-   margin-left: 30px;
- }
-}
+    & {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-left: 30px;
+    }
+  }
 }
 
 .icon-contacts {
   display: none;
   @media screen and (min-width: 768px) {
-  & {
-    display: inline-block;
-    margin-right: 10px;
-  fill: currentColor;
-  transition: fill $transition;
-  }
+    & {
+      display: inline-block;
+      margin-right: 10px;
+      fill: currentColor;
+      transition: fill $transition;
+    }
   }
   .contacts__mail:hover & {
     fill: $additional-and-hover-color;
@@ -221,18 +246,18 @@ display: none;
   @include font(34px, 500, 1.18, 0.02em);
 
   @media screen and (min-width: 768px) {
-   & {
-     @include font(12px, 500, 1.17, 0.02em);
-     color: $font-support-color;
-   }
- }
+    & {
+      @include font(12px, 500, 1.17, 0.02em);
+      color: $font-support-color;
+    }
+  }
 
   @media screen and (min-width: 1200px) {
-   & {
-     padding: 32px 0;
-     @include font(14px, 500, 1.14, 0.02em);
-   }
- }
+    & {
+      padding: 32px 0;
+      @include font(14px, 500, 1.14, 0.02em);
+    }
+  }
 
   &:hover,
   &:focus {
@@ -246,23 +271,22 @@ display: none;
   @include font(24px, 500, 1.17, 0.02em);
   color: $font-support-color;
   @media screen and (min-width: 768px) {
-   & {
-     @include font(12px, 500, 1.17, 0.02em);
-   }
- }
+    & {
+      @include font(12px, 500, 1.17, 0.02em);
+    }
+  }
 
   @media screen and (min-width: 1200px) {
-   & {
-     padding: 32px 0;
-     @include font(14px, 500, 1.14, 0.02em);
-   }
- }
+    & {
+      padding: 32px 0;
+      @include font(14px, 500, 1.14, 0.02em);
+    }
+  }
 
   &:hover,
   &:focus {
     color: $additional-and-hover-color;
   }
-
 }
 
 .mobile-socials {
@@ -270,13 +294,12 @@ display: none;
     & {
       justify-content: flex-start;
     }
-}
-@media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 768px) {
     & {
       display: none;
-
     }
-}
+  }
 }
 
 .mobile-socials__item:not(:last-child) {

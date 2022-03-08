@@ -96,13 +96,13 @@ body img {
 }
 
 .page-header {
+  position: relative;
   font-weight: 500;
   color: #212121;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header__container {
-  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -145,7 +145,36 @@ body img {
   color: #2196f3;
 }
 
-.icon-mobile-menu {
+.page-header__menu-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.page-header__menu-btn:hover .icon-mobile-menu,
+.page-header__menu-btn:focus .icon-mobile-menu {
+  fill: #2196f3;
+}
+
+.page-header__menu-btn.is-open {
+  z-index: 3;
+}
+
+.page-header__menu-btn.is-open .icon-cross {
+  display: block;
+}
+
+.page-header__menu-btn.is-open .icon-burger {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header__menu-btn {
+    display: none;
+  }
+}
+
+.icon-cross {
   display: none;
 }
 
@@ -154,27 +183,29 @@ body img {
     display: inline-block;
     fill: #212121;
   }
-  .icon-mobile-menu:hover, .icon-mobile-menu:focus {
-    fill: #2196f3;
-  }
 }
 
-.header__inner-menu {
-  display: block;
+.page-header__inner-menu {
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .header__inner-menu {
+  .page-header__inner-menu {
     position: absolute;
     top: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
     padding: 48px 40px;
     background-color: #ffffff;
+    z-index: 2;
+  }
+  .page-header__menu-btn.is-open ~ .page-header__inner-menu {
+    display: block;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header__inner-menu {
+  .page-header__inner-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,7 +213,7 @@ body img {
 }
 
 @media screen and (min-width: 1200px) {
-  .header__inner-menu {
+  .page-header__inner-menu {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1188,7 +1219,6 @@ body img {
 
 .product {
   margin-bottom: 30px;
-  border: 1px solid #eee;
 }
 
 .product:last-child {
@@ -1203,9 +1233,6 @@ body img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .product {
-    width: 354px;
-  }
   .product:nth-child(2n) {
     margin-right: 0;
   }
@@ -1215,9 +1242,6 @@ body img {
 }
 
 @media screen and (min-width: 1200px) {
-  .product {
-    width: 370px;
-  }
   .product:nth-child(3n) {
     margin-right: 0;
   }

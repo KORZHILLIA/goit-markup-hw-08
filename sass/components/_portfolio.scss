@@ -25,7 +25,6 @@
 
 .product {
   margin-bottom: 30px;
-  border: 1px solid $portfolio-card-border-color;
 
   &:last-child {
     margin-bottom: 0;
@@ -37,7 +36,6 @@
     }
   
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      width: 354px;
 
       &:nth-child(2n) {
         margin-right: 0;
@@ -50,7 +48,6 @@
     }
 
     @media screen and (min-width: 1200px) {
-      width: 370px;
 
       &:nth-child(3n) {
           margin-right: 0;

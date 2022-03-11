@@ -77,9 +77,9 @@
 }
 
 .icon-mobile-menu {
+  fill: $font-lead-color;
   @media screen and (max-width: 767px) {
       display: inline-block;
-      fill: $font-lead-color;
   }
 }
 

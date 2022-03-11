@@ -15,6 +15,7 @@ p {
 
 body button {
   cursor: pointer;
+  padding: 0;
 }
 
 body img {
@@ -178,10 +179,13 @@ body img {
   display: none;
 }
 
+.icon-mobile-menu {
+  fill: #212121;
+}
+
 @media screen and (max-width: 767px) {
   .icon-mobile-menu {
     display: inline-block;
-    fill: #212121;
   }
 }
 
@@ -916,14 +920,23 @@ body img {
   color: #757575;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    padding-top: 208px;
+    padding-left: 159px;
+    padding-right: 159px;
+  }
+}
+
 .modal {
-  position: absolute;
-  width: 528px;
-  height: 581px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
@@ -931,14 +944,30 @@ body img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 .modal__header {
-  font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+  text-align: center;
   color: inherit;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__header {
+    line-height: 1.15;
+  }
 }
 
 .form__label {
@@ -947,11 +976,12 @@ body img {
 }
 
 .label__text {
-  display: block;
-  margin-bottom: 4px;
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  display: block;
+  margin-bottom: 4px;
   color: #757575;
 }
 
@@ -993,6 +1023,7 @@ body img {
 
 .form__input--large::-webkit-input-placeholder {
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -1000,6 +1031,7 @@ body img {
 
 .form__input--large:-ms-input-placeholder {
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -1007,6 +1039,7 @@ body img {
 
 .form__input--large::-ms-input-placeholder {
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -1014,6 +1047,7 @@ body img {
 
 .form__input--large::placeholder {
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -1030,7 +1064,7 @@ body img {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border: 3px solid #212121;
+  border: 2px solid #212121;
   border-radius: 4px;
   background-size: cover;
   background-origin: border-box;
@@ -1043,13 +1077,20 @@ body img {
 }
 
 .contract__agreement {
-  display: inline-block;
-  margin-bottom: 30px;
-  text-align: center;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  display: inline-block;
+  margin-bottom: 31px;
+  text-align: center;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .contract__agreement {
+    margin-bottom: 30px;
+  }
 }
 
 .contract__link--blue-accent {

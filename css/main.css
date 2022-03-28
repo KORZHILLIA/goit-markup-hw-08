@@ -26,6 +26,8 @@ body img {
 
 .container {
   min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -198,7 +200,8 @@ body img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     background-color: #ffffff;
     z-index: 2;
@@ -278,6 +281,26 @@ body img {
   color: #2196f3;
 }
 
+.navigation__link.is-active::after {
+  position: absolute;
+  bottom: -1px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 479px) {
+  .navigation__link {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navigation__link {
     display: block;
@@ -290,16 +313,6 @@ body img {
     color: inherit;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .navigation__link.is-active::after {
-    position: absolute;
-    bottom: -1px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #2196f3;
-    border-radius: 2px;
   }
 }
 
@@ -387,6 +400,15 @@ body img {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 479px) {
+  .contacts__tel {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contacts__tel {
     font-size: 12px;
@@ -420,6 +442,15 @@ body img {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+@media screen and (max-width: 479px) {
+  .contacts__mail {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -472,6 +503,15 @@ body img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-socials__text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+}
+
 .icon-mobile-social {
   display: inline-block;
   fill: #757575;
@@ -517,6 +557,13 @@ body img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .basement__container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -644,6 +691,12 @@ body img {
   fill: #ffffff;
 }
 
+@media screen and (max-width: 480px) {
+  .basement__form {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .basement__form {
     text-align: center;
@@ -682,6 +735,12 @@ body img {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 480px) {
+  .basement__input {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -915,8 +974,15 @@ body img {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .feature-describer__header {
+    text-align: center;
+  }
+}
+
 .feature-describer__text {
   line-height: 1.71;
+  font-weight: 400;
   color: #757575;
 }
 
@@ -1306,6 +1372,13 @@ body img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .product__link {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
 .product__text {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
@@ -1316,8 +1389,15 @@ body img {
 .text__header {
   margin-bottom: 4px;
   font-size: 18px;
-  line-height: 2;
   font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .text__header {
+    max-width: 306px;
+  }
 }
 
 .text__subheader {
@@ -1353,12 +1433,22 @@ body img {
 .overlay__text {
   color: #ffffff;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.56;
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 479px) {
+  .overlay__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+  }
+}
+
 .slogan {
-  min-width: 100vw;
+  max-width: 100vw;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;

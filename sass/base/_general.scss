@@ -26,7 +26,8 @@ body img {
 
 .container {
   min-width: 320px;
-
+  padding-left: 15px;
+  padding-right: 15px;
 
 @media screen and (min-width: 480px) {
   & {

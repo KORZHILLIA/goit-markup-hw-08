@@ -73,9 +73,14 @@
 .feature-describer__header {
   margin-bottom: 10px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .feature-describer__text {
   line-height: 1.71;
+  font-weight: 400;
   color: $font-support-color;
 }

@@ -10,6 +10,11 @@
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 480px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -120,6 +125,9 @@
 }
 
 .basement__form {
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
   @media screen and (max-width: 1199px) {
     text-align: center;    
   }
@@ -146,6 +154,10 @@
   background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: $footer-font-color;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
   
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;

@@ -1,5 +1,5 @@
 @mixin container($width, $p-vert, $p-horiz, $ml: auto, $mr: auto) {
-  max-width: $width;
+  width: $width;
   padding: $p-vert $p-horiz;
   margin-left: $ml;
   margin-right: $mr;

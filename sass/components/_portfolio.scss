@@ -10,6 +10,7 @@
 
 .portfolio__cards {
   flex-direction: column;
+    align-items: stretch;
 
   
   @media screen and (min-width: 768px) {
@@ -24,6 +25,7 @@
 }
 
 .product {
+  width: 100%;
   margin-bottom: 30px;
 
   &:last-child {
@@ -31,23 +33,24 @@
   }
 
     @media screen and (min-width: 768px) {
+      width: 354px;
       margin-right: 30px;
       margin-bottom: 30px;      
     }
   
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-
       &:nth-child(2n) {
         margin-right: 0;
       }
 
-      &:nth-last-child(-n + 1) {
+      &:nth-last-child(-n + 2) {
         margin-bottom: 0;
       }
       
     }
 
     @media screen and (min-width: 1200px) {
+      width: 370px;
 
       &:nth-child(3n) {
           margin-right: 0;
@@ -61,7 +64,8 @@
 }
 
 .product__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
   transition: box-shadow $transition;
@@ -73,11 +77,12 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-shrink: 0;
+    // flex-shrink: 0;
   }
 }
 
 .product__text {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid $portfolio-product-border-color;
   border-right: 1px solid $portfolio-product-border-color;
@@ -107,10 +112,14 @@
   position: absolute;
   top: 0;
   height: 100%;
-  padding: 63px 24px;
+  padding: 49px 24px;
   background-color: $product-label-bg-color;
   transform: translateY(100%);
   transition: transform $transition;
+
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 
   .product__link:hover &,
 .product__link:focus & {

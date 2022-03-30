@@ -25,14 +25,14 @@ body img {
 }
 
 .container {
-  min-width: 320px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
@@ -41,7 +41,7 @@ body img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +50,7 @@ body img {
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
@@ -163,6 +163,12 @@ body img {
   z-index: 3;
 }
 
+.page-header__menu-btn.is-open .icon-mobile-menu {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+}
+
 .page-header__menu-btn.is-open .icon-cross {
   display: block;
 }
@@ -197,7 +203,7 @@ body img {
 
 @media screen and (max-width: 767px) {
   .page-header__inner-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -492,6 +498,18 @@ body img {
 
 .mobile-socials__item:not(:last-child) {
   margin-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-socials__item:not(:last-child)::after {
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 22px;
+  margin-left: 10px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .mobile-socials__text {
@@ -510,11 +528,6 @@ body img {
     line-height: 1.22;
     letter-spacing: 0.02em;
   }
-}
-
-.icon-mobile-social {
-  display: inline-block;
-  fill: #757575;
 }
 
 .backdrop {
@@ -823,7 +836,13 @@ body img {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .clients__item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients__item:nth-child(2n) {
     margin-right: 0;
   }
@@ -1303,6 +1322,9 @@ body img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 @media screen and (min-width: 768px) {
@@ -1325,6 +1347,7 @@ body img {
 }
 
 .product {
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -1334,6 +1357,7 @@ body img {
 
 @media screen and (min-width: 768px) {
   .product {
+    width: 354px;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1343,12 +1367,15 @@ body img {
   .product:nth-child(2n) {
     margin-right: 0;
   }
-  .product:nth-last-child(-n + 1) {
+  .product:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .product {
+    width: 370px;
+  }
   .product:nth-child(3n) {
     margin-right: 0;
   }
@@ -1358,7 +1385,13 @@ body img {
 }
 
 .product__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
   color: inherit;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1372,14 +1405,10 @@ body img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .product__link {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-}
-
 .product__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1414,7 +1443,7 @@ body img {
   position: absolute;
   top: 0;
   height: 100%;
-  padding: 63px 24px;
+  padding: 49px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1422,6 +1451,12 @@ body img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .product__overlay {
+    padding: 63px 24px;
+  }
 }
 
 .product__link:hover .product__overlay,

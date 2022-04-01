@@ -251,13 +251,13 @@ body img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    margin-bottom: 302px;
+    margin-bottom: 63%;
   }
 }
 
 @media screen and (max-width: 767px) {
   .navigation__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 6%;
   }
 }
 

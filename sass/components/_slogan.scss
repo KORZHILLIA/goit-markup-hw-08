@@ -12,6 +12,14 @@
     & {
       background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
       url('../images/index-img/slogan-bg-mobile.jpg');
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
+        url('../images/index-img/slogan-bg-mobile2x.jpg');
+      }
     }
   }
   
@@ -19,8 +27,17 @@
     & {
       background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
       url('../images/index-img/slogan-bg-tablet.jpg');
+      
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
+          url('../images/index-img/slogan-bg-tablet2x.jpg');
     }
   }
+}
   
   @media screen and (min-width: 1200px) {
     & {
@@ -30,18 +47,18 @@
       padding-bottom: 200px;
       background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
       url('../images/index-img/slogan-bg.jpg');
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, $overlay-slogan, $overlay-slogan),
+          url('../images/index-img/slogan-bg2x.jpg');
     }
   }
 
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (-o-min-device-pixel-ratio: 2/1),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    background-image: url('../images/index-img/slogan-bg.jpg');
-  }
 }
-
+}
 .slogan__text {
   text-transform: uppercase;
   @include font(26px, 900, 1.62, 0.06em);

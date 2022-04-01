@@ -110,19 +110,20 @@
 
   .contract__checkbox:checked + & {
     background-color: $additional-and-hover-color;
-  background-image: url(../images/svg/check.svg);
+  background-image: url('../images/svg/check.svg');
   border-color: $additional-and-hover-color;
   }
 }
 
 .contract__agreement {
-  @include font(14px, 400, 1.71, 0.03em);
+  @include font(12px, 400, 1.17, 0.03em);
   display: inline-block;
   margin-bottom: 31px;
   text-align: center;
   color: $font-support-color;
 
   @media screen and (min-width: 1200px) {
+    @include font(14px, 400, 1.71, 0.03em);
     margin-bottom: 30px;
   }
 

@@ -1008,7 +1008,7 @@ body img {
 
 @media screen and (max-width: 767px) {
   .backdrop {
-    padding-top: 93px;
+    padding-top: 5%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1050,6 +1050,16 @@ body img {
   margin-bottom: 12px;
 }
 
+@media screen and (max-width: 767px) {
+  .modal__header {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 2%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal__header {
     line-height: 1.15;
@@ -1059,6 +1069,12 @@ body img {
 .form__label {
   display: block;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .form__label {
+    margin-bottom: 2%;
+  }
 }
 
 .label__text {
@@ -1171,6 +1187,12 @@ body img {
   margin-bottom: 31px;
   text-align: center;
   color: #757575;
+}
+
+@media screen and (max-width: 767px) {
+  .contract__agreement {
+    margin-bottom: 6%;
+  }
 }
 
 @media screen and (min-width: 1200px) {

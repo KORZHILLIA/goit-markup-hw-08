@@ -1,7 +1,7 @@
 .backdrop {
 
   @media screen and (max-width: 767px) {
-  padding-top: 93px;
+  padding-top: 5%;
   padding-left: 15px;
   padding-right: 15px;
   }
@@ -33,6 +33,11 @@
   text-align: center;
   color: inherit;
   margin-bottom: 12px;
+
+  @media screen and (max-width: 767px) {
+    @include font(16px, 700, 1.2, 0.03em);
+    margin-bottom: 2%;
+  }
   
   @media screen and (min-width: 1200px) {
     line-height: 1.15;    
@@ -42,6 +47,11 @@
 .form__label {
   display: block;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 2%;
+  }
+  
 }
 
 .label__text {
@@ -121,6 +131,10 @@
   margin-bottom: 31px;
   text-align: center;
   color: $font-support-color;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 6%;
+  }
 
   @media screen and (min-width: 1200px) {
     @include font(14px, 400, 1.71, 0.03em);
